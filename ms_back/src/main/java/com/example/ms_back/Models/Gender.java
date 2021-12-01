@@ -6,12 +6,14 @@ import javax.persistence.*;
 @Table(name = "gender")
 public class Gender {
 
+    //atributos y anotaciones JPA para crearlos en la base de datos
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_gender;
     @Column(nullable = false)
     private String name_gender;
 
+    //Getters and Setters
     public Long getId_gender() {
         return id_gender;
     }

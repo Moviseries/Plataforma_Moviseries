@@ -6,6 +6,7 @@ import javax.persistence.*;
 @Table(name = "user")
 public class User {
 
+    //atributos y anotaciones JPA para crearlos en la base de datos
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_user;
@@ -18,6 +19,7 @@ public class User {
     @Column(nullable = false)
     private byte rol;
 
+    //Getters and Setters
     public Long getId_user() {
         return id_user;
     }

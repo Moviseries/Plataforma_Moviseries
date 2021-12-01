@@ -7,14 +7,18 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
+//Indicamos que es un controlador
 @RestController
+//Damos accerso al origen de React
 @CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/api")
 public class Controller_Gender_Serie {
 
+    //Autoiniciamos un objeto
     @Autowired
     Service_Gender_Serie service_gender_serie;
 
+    //Creamos los endpoints consumiendo su respectivo servicio
     @PostMapping(path = "/gender_serie")
     public Gender_Serie createGender_Serie (@RequestBody Gender_Serie gender_serie){
         return service_gender_serie.addGender_Serie(gender_serie);

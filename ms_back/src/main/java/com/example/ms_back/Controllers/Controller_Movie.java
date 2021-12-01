@@ -7,14 +7,18 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
+//Indicamos que es un controlador
 @RestController
+//Damos accerso al origen de React
 @CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/api")
 public class Controller_Movie {
 
+    //Autoiniciamos un objeto
     @Autowired
     Service_Movie service_movie;
 
+    //Creamos los endpoints consumiendo su respectivo servicio
     @PostMapping(path = "/movie")
     public Movie createMovie (@RequestBody Movie movie){
         return service_movie.addMovie(movie);

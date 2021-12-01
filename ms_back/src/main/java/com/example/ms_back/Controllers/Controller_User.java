@@ -7,14 +7,18 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
+//Indicamos que es un controlador
 @RestController
+//Damos accerso al origen de React
 @CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/api")
 public class Controller_User {
 
+    //Auto iniciamos un objeto
     @Autowired
     Service_User service_user;
 
+    //Creamos los endpoints consumiendo su respectivo servicio
     @PostMapping(path = "/user")
     public User createUser (@RequestBody User user){
         return service_user.addUser(user);

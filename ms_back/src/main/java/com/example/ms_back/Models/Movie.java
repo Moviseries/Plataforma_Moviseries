@@ -6,6 +6,7 @@ import javax.persistence.*;
 @Table(name = "movie")
 public class Movie {
 
+    //atributos y anotaciones JPA para crearlos en la base de datos
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_movie;
@@ -16,6 +17,7 @@ public class Movie {
     @Column(nullable = false)
     private String cine;
 
+    //Getters and Setters
     public Long getId_movie() {
         return id_movie;
     }

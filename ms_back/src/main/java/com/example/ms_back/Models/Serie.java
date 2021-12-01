@@ -6,6 +6,7 @@ import javax.persistence.*;
 @Table(name = "serie")
 public class Serie {
 
+    //atributos y anotaciones JPA para crearlos en la base de datos
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_serie;
@@ -16,6 +17,7 @@ public class Serie {
     @Column(nullable = false)
     private String plataforma;
 
+    //Getters and Setters
     public Long getId_serie() {
         return id_serie;
     }
