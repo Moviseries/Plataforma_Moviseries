@@ -15,6 +15,8 @@ public class Movie {
     @Column(nullable = false)
     private String fecha_movie;
     @Column(nullable = false)
+    private String url_imagen_movie;
+    @Column(nullable = false)
     private String cine;
 
     //Getters and Setters
@@ -48,5 +50,13 @@ public class Movie {
 
     public void setCine(String cine) {
         this.cine = cine;
+    }
+
+    public String getUrl_imagen_movie() {
+        return url_imagen_movie;
+    }
+
+    public void setUrl_imagen_movie(String url_imagen_movie) {
+        this.url_imagen_movie = url_imagen_movie;
     }
 }

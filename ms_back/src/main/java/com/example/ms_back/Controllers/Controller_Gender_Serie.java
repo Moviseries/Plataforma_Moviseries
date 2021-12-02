@@ -33,4 +33,10 @@ public class Controller_Gender_Serie {
     public String deleteGender_Serie(@PathVariable("id") Long id){
         return service_gender_serie.deleteGender_SerieById(id);
     }
+
+    //Endpoint para obtener el arrayList de los datos mediante el id gender
+    @GetMapping(path = "/gender_serie/gender/{id}")
+    public ArrayList<Gender_Serie> getDataByGender(@PathVariable("id") Long id){
+        return service_gender_serie.getGender_SerieByGender(id);
+    }
 }

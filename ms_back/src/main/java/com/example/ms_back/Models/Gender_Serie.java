@@ -10,8 +10,8 @@ public class Gender_Serie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_gen_ser;
-    @Column(nullable = false)
-    private Long id_genero;
+    @Column(nullable = false, name = "id_gender")
+    private Long idgender;
     @Column(nullable = false)
     private Long id_serie;
 
@@ -25,11 +25,11 @@ public class Gender_Serie {
     }
 
     public Long getId_genero() {
-        return id_genero;
+        return idgender;
     }
 
     public void setId_genero(Long id_genero) {
-        this.id_genero = id_genero;
+        this.idgender = id_genero;
     }
 
     public Long getId_serie() {

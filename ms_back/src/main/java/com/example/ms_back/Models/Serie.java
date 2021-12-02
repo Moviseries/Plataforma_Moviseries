@@ -15,6 +15,8 @@ public class Serie {
     @Column(nullable = false)
     private String fecha_serie;
     @Column(nullable = false)
+    private String url_imagen_serie;
+    @Column(nullable = false)
     private String plataforma;
 
     //Getters and Setters
@@ -48,5 +50,13 @@ public class Serie {
 
     public void setPlataforma(String plataforma) {
         this.plataforma = plataforma;
+    }
+
+    public String getUrl_imagen_serie() {
+        return url_imagen_serie;
+    }
+
+    public void setUrl_imagen_serie(String url_imagen_serie) {
+        this.url_imagen_serie = url_imagen_serie;
     }
 }

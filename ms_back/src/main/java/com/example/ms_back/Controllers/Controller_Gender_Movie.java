@@ -8,9 +8,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 
 //Indicamos que es un controlador
-
-
-
 @RestController
 //Damos accerso al origen de React
 @CrossOrigin(origins = "http://localhost:3000")
@@ -35,5 +32,10 @@ public class Controller_Gender_Movie {
     @DeleteMapping(path = "/gender_movie/{id}")
     public String deleteGender_Movie (@PathVariable("id") Long id){
         return service_gender_movie.deleteGender_MovieById(id);
+    }
+
+    @GetMapping(path = "/gender_movie/gender/{id}")
+    public ArrayList<Gender_Movie> getMovieByGender(@PathVariable("id") Long id){
+        return service_gender_movie.findGender(id);
     }
 }

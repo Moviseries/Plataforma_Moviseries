@@ -1,6 +1,6 @@
 package com.example.ms_back.Services;
-
 import com.example.ms_back.Models.Gender_Movie;
+import com.example.ms_back.Models.Movie;
 import com.example.ms_back.Repositorys.Repository_Gender_Movie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,4 +29,9 @@ public class Service_Gender_Movie {
             return "El genero de la película no existe o no se pudo eliminar";
         }
     }
+
+    public ArrayList<Gender_Movie> findGender(Long id_gender){
+        return repository_gender_movie.findByIdgender(id_gender);
+    }
+
 }

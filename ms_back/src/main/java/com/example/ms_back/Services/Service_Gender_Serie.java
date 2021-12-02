@@ -29,4 +29,9 @@ public class Service_Gender_Serie {
             return "No se encontro el genero de la película o no se puede eliminar";
         }
     }
+
+    //Servicio para obtener los datos por gender
+    public ArrayList<Gender_Serie> getGender_SerieByGender(Long id){
+        return repository_gender_serie.findByIdgender(id);
+    }
 }

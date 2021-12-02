@@ -10,8 +10,8 @@ public class Gender_Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_gen_mov;
-    @Column(nullable = false)
-    private Long id_gender;
+    @Column(nullable = false, name = "id_gender")
+    private Long idgender;
     @Column(nullable = false)
     private Long id_movie;
 
@@ -25,11 +25,11 @@ public class Gender_Movie {
     }
 
     public Long getId_gender() {
-        return id_gender;
+        return idgender;
     }
 
     public void setId_gender(Long id_gender) {
-        this.id_gender = id_gender;
+        this.idgender = id_gender;
     }
 
     public Long getId_movie() {

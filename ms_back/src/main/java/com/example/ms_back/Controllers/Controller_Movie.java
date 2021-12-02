@@ -1,5 +1,6 @@
 package com.example.ms_back.Controllers;
 
+import com.example.ms_back.Models.Gender_Movie;
 import com.example.ms_back.Models.Movie;
 import com.example.ms_back.Services.Service_Movie;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,4 +34,5 @@ public class Controller_Movie {
     public String deleteMovie(@PathVariable("id") Long id){
         return service_movie.deleteMovieById(id);
     }
+
 }
