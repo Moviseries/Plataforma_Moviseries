@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card'
 import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Movie from '../services/service_movie'
 
 const Estrenos = () => {
     return (  
@@ -18,55 +19,11 @@ const Estrenos = () => {
                             <Card.Title>Movie</Card.Title>
                         </Card.Body>
                     </Card>
-                </Col>
 
-                <Col>
-                    <Card style={{width: '18rem'}}>
-                        <Card.Img variant="top" src="https://via.placeholder.com/286x280"/>
-                        <Card.Body>
-                            <Card.Title>Movie</Card.Title>
-                        </Card.Body>
-                    </Card>
-                </Col>
-
-                <Col>
-                    <Card style={{width: '18rem'}}>
-                        <Card.Img variant="top" src="https://via.placeholder.com/286x280"/>
-                        <Card.Body>
-                            <Card.Title>Movie</Card.Title>
-                        </Card.Body>
-                    </Card>
+                    <Movie />
                 </Col>
             </Row>
-
-            <Row className="mt-3 mb-3">
-                <Col>
-                    <Card style={{width: '18rem'}}>
-                        <Card.Img variant="top" src="https://via.placeholder.com/286x280"/>
-                        <Card.Body>
-                            <Card.Title>Movie</Card.Title>
-                        </Card.Body>
-                    </Card>
-                </Col>
-
-                <Col>
-                    <Card style={{width: '18rem'}}>
-                        <Card.Img variant="top" src="https://via.placeholder.com/286x280"/>
-                        <Card.Body>
-                            <Card.Title>Movie</Card.Title>
-                        </Card.Body>
-                    </Card>
-                </Col>
-
-                <Col>
-                    <Card style={{width: '18rem'}}>
-                        <Card.Img variant="top" src="https://via.placeholder.com/286x280"/>
-                        <Card.Body>
-                            <Card.Title>Movie</Card.Title>
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
+            
         </Container>
     );
 }
