@@ -5,13 +5,14 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 import Container from 'react-bootstrap/Container'
 import Logo from '../images/logo.svg'
 import User from '../images/user.svg'
+import Gender from '../services/service_gender'
 
 const NavBar = () => {
 
     const title = 
         <Navbar.Brand href="#">  
             <img 
-                src={User} 
+                src={User}
                 alt="" 
                 width="30"
                 height="30"
@@ -27,20 +28,18 @@ const NavBar = () => {
                         src={Logo}
                         width="40"
                         height="40"
-                        className="d-inline-block align-top"
+                        className="d-inline-block"
                     />{' '}
                     Moviseries
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="m-auto">
-                        <Nav.Link href="#features">Inicio</Nav.Link>
-                        <Nav.Link href="#pricing">Peliculas</Nav.Link>
-                        <Nav.Link href="#pricing">Series</Nav.Link>
+                        <Nav.Link className="mr-2" href="#features">Inicio</Nav.Link>
+                        <Nav.Link className="mr-2" href="#pricing">Peliculas</Nav.Link>
+                        <Nav.Link className="mr-2" href="#pricing">Series</Nav.Link>
                         <NavDropdown title="Categorias" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Accion</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Romance</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Comedia</NavDropdown.Item>
+                            <Gender />
                         </NavDropdown>
                     </Nav>
 

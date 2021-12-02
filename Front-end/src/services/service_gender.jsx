@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ViewGender from "../components/ViewGender";
 
 export default function ServiceClass(){
     const HOST_API = "http://localhost:8080/api/";
@@ -22,7 +23,7 @@ export default function ServiceClass(){
 
     return(
         <div>
-            {console.log(state)}
+            <ViewGender props={state} />
         </div>
     );
 }
