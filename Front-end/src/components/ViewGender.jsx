@@ -7,7 +7,7 @@ export default function ViewGender (props){
             {
             props.props.dataSource.map((element) => {
                 return (
-                    <NavDropdown.Item href="#action/3.2">{element.name_gender}</NavDropdown.Item>
+                    <NavDropdown.Item href = {element.name_gender} >{element.name_gender}</NavDropdown.Item>
                 )
             })
             }

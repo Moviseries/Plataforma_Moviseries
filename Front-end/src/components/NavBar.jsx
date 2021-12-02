@@ -10,7 +10,7 @@ import Gender from '../services/service_gender'
 const NavBar = () => {
 
     const title = 
-        <Navbar.Brand href="#">  
+        <Navbar.Brand href="inicio">  
             <img 
                 src={User}
                 alt="" 
@@ -22,7 +22,7 @@ const NavBar = () => {
     return ( 
         <Navbar bg="dark" variant="dark" expand={true}>
             <Container fluid>
-                <Navbar.Brand href="#">       
+                <Navbar.Brand href="/">       
                     <img
                         alt="Logo"
                         src={Logo}
@@ -35,17 +35,17 @@ const NavBar = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="m-auto">
-                        <Nav.Link className="mr-2" href="#features">Inicio</Nav.Link>
-                        <Nav.Link className="mr-2" href="#pricing">Peliculas</Nav.Link>
-                        <Nav.Link className="mr-2" href="#pricing">Series</Nav.Link>
+                        <Nav.Link className="mr-2" href="/">Inicio</Nav.Link>
+                        <Nav.Link className="mr-2" href="/Movies">Peliculas</Nav.Link>
+                        <Nav.Link className="mr-2" href="/Series">Series</Nav.Link>
                         <NavDropdown title="Categorias" id="collasible-nav-dropdown">
                             <Gender />
                         </NavDropdown>
                     </Nav>
 
                     <NavDropdown title={title} className="mr-auto">
-                            <NavDropdown.Item href="#action/3.1">Iniciar Sesion</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Registrarse</NavDropdown.Item>
+                            <NavDropdown.Item href="Login">Iniciar Sesion</NavDropdown.Item>
+                            <NavDropdown.Item href="Register">Registrarse</NavDropdown.Item>
                     </NavDropdown>
                 </Navbar.Collapse>
             </Container>

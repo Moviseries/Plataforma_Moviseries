@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import CardView from "../components/CardView";
+import CardView from "../components/CardViewMovies";
 
-export default function ServiceClass(){
+export default function ServiceClass({amount}){
     const HOST_API = "http://localhost:8080/api/";
 
     const [state, setState] = useState({
@@ -21,7 +21,7 @@ export default function ServiceClass(){
 
     return(
         <div>
-            <CardView props={state} />
+            <CardView props={state} amount={amount}/>
         </div>
     );
 }
