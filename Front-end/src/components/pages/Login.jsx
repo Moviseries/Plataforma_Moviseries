@@ -1,20 +1,20 @@
 import React,{useState} from 'react'
 import { Container, Form, Button, Card} from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import Estrenos from './Estrenos';
-import { Router, Navigate } from 'react-router';
+import { Navigate } from 'react-router';
 
 const Login = (props) => {
 
     const {register,handleSubmit, formState: {errors}} = useForm();
     const [entradas, setentradas] = useState([])
-    const [login, setLogin] = useState(props.login);
+    const [login, setLogin] = useState();
     const onSubmit = (data, e) => {
         setentradas([...entradas,data])
         e.target.reset()
         props.datos.dataSource.map((dato) => {
             if(dato.username === data.username && dato.password === data.password){
                 setLogin(true)
+                alert("Login exitoso")
             }
         })
     }
@@ -39,7 +39,6 @@ const Login = (props) => {
                             />
                             <Form.Label>Contraseña</Form.Label>
                             <Form.Control 
-                                name="password"
                                 type="password"
                                 {
                                     ...register("password",{
