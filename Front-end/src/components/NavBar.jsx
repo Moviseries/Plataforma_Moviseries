@@ -35,7 +35,7 @@ const NavBar = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="m-auto">
-                        <Nav.Link className="mr-2" href="/">Inicio</Nav.Link>
+                        <Nav.Link className="mr-2" href="/Home">Inicio</Nav.Link>
                         <Nav.Link className="mr-2" href="/Movies">Peliculas</Nav.Link>
                         <Nav.Link className="mr-2" href="/Series">Series</Nav.Link>
                         <NavDropdown title="Categorias" id="collasible-nav-dropdown">
