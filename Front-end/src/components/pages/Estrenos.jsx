@@ -15,7 +15,7 @@ const Estrenos = () => {
                 <Movies amount={8} />
                 <hr />
                 <h1>Estrenos Series</h1>
-                <Series />
+                <Series amount={8} />
 
             </Container>
         </Fragment>

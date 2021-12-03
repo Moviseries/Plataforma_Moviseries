@@ -1,10 +1,9 @@
 import React from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
-import img from '../images/img1.jpg'
 
 export default function CardViewMovies(props){
 
-    if(props.amount === 0){
+    if(props.amount === 0 && props.amount === null){
         props.amount = props.props.dataSource.length();
     }
 
@@ -16,7 +15,7 @@ export default function CardViewMovies(props){
                     return (
                         <Col>
                             <Card>
-                                <Card.Img variant="top" src={img}/>
+                                <Card.Img variant="top" src={element.url_imagen_movie}/>
                                 <Card.Body>
                                     <Card.Title>{element.name_movie}</Card.Title>
                                     <Card.Text><b>Fecha de estreno:</b> {element.fecha_movie}</Card.Text>

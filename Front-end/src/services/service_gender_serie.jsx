@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+import CardViewSeries from '../components/CardViewSeries'
 
-export default function ServiceClass(){
+export default function ServiceClass(props){
     const HOST_API = "http://localhost:8080/api/";
 
     const [state, setState] = useState({
@@ -8,11 +9,9 @@ export default function ServiceClass(){
     })
 
     const getGender_Series = () => {
-        fetch(HOST_API + "gender_series")
+        fetch(HOST_API + "serie/gender/"+props.props)
         .then((response) => response.json())
-        .then((data) => setState({
-            dataSource: data
-        }))
+        .then((data) => setState({dataSource: data}))
         .catch((error) => console.error(error))
     }
 
@@ -22,7 +21,7 @@ export default function ServiceClass(){
 
     return(
         <div>
-            {console.log(state)}
+            <CardViewSeries props={state}/>
         </div>
     );
 }

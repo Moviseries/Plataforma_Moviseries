@@ -18,6 +18,8 @@ public class Movie {
     private String url_imagen_movie;
     @Column(nullable = false)
     private String cine;
+    @Column(nullable = false)
+    private Long gender;
 
     //Getters and Setters
     public Long getId_movie() {
@@ -58,5 +60,13 @@ public class Movie {
 
     public void setUrl_imagen_movie(String url_imagen_movie) {
         this.url_imagen_movie = url_imagen_movie;
+    }
+
+    public Long getGender() {
+        return gender;
+    }
+
+    public void setGender(Long gender) {
+        this.gender = gender;
     }
 }

@@ -18,6 +18,8 @@ public class Serie {
     private String url_imagen_serie;
     @Column(nullable = false)
     private String plataforma;
+    @Column(nullable = false)
+    private Long gender;
 
     //Getters and Setters
     public Long getId_serie() {
@@ -58,5 +60,13 @@ public class Serie {
 
     public void setUrl_imagen_serie(String url_imagen_serie) {
         this.url_imagen_serie = url_imagen_serie;
+    }
+
+    public Long getGender() {
+        return gender;
+    }
+
+    public void setGender(Long gender) {
+        this.gender = gender;
     }
 }

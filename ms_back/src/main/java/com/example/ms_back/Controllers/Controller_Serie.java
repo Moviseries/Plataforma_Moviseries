@@ -33,4 +33,10 @@ public class Controller_Serie {
     public String deleteSerie(@PathVariable("id") Long id){
         return service_serie.deleteSerieById(id);
     }
+
+    //Endpoint para obtener las peliculas por genero
+    @GetMapping(path = "/serie/gender/{id}")
+    public ArrayList<Serie> getMovieByGender(@PathVariable("id") Long id){
+        return service_serie.getMovieByGender(id);
+    }
 }

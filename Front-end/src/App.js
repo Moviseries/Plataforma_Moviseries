@@ -19,7 +19,7 @@ function App() {
           <Route exact path="/" element={<Estrenos/>}/>
           <Route exact path="/Movies" element={<Movies/>}/>
           <Route exact path="/Series" element={<Series/>}/>
-          <Route exact path="/Gender" element={<Gender/>}/>
+          <Route exact path="/Genders/:id/:name" element={<Gender/>}/>
           <Route exact path="/Login" element={<Login/>}/>
           <Route exact path="/Register" element={<Register/>}/>
         </Routes>

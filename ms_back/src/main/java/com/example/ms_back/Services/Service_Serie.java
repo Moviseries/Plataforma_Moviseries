@@ -29,4 +29,9 @@ public class Service_Serie {
             return "La serie no existe o no se pudo eliminar";
         }
     }
+
+    //Función para obtener las peliculas por genero
+    public ArrayList<Serie> getMovieByGender(Long id){
+        return repository_serie.findByGender(id);
+    }
 }
