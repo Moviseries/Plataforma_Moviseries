@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 @Service
 public class Service_Movie {
@@ -15,6 +16,10 @@ public class Service_Movie {
 
     public Movie addMovie (Movie movie){
         return repository_movie.save(movie);
+    }
+
+    public Optional<Movie> getMovie (Long id) {
+        return repository_movie.findById(id);
     }
 
     public ArrayList<Movie> getAllMovies(){

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 //Indicamos que es un controlador
 @RestController
@@ -22,6 +23,11 @@ public class Controller_Movie {
     @PostMapping(path = "/movie")
     public Movie createMovie (@RequestBody Movie movie){
         return service_movie.addMovie(movie);
+    }
+
+    @GetMapping(path = "/movie/{id}")
+    public Optional<Movie> getMovieById(@PathVariable("id") Long id){
+        return service_movie.getMovie(id);
     }
 
     @GetMapping(path = "/movies")

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 @Service
 public class Service_Serie {
@@ -15,6 +16,10 @@ public class Service_Serie {
 
     public Serie addSerie (Serie serie){
         return repository_serie.save(serie);
+    }
+
+    public Optional<Serie> getSerie(Long id){
+        return repository_serie.findById(id);
     }
 
     public ArrayList<Serie> getAllSeries(){
