@@ -6,8 +6,6 @@ _Plataforma web para enterarte de las novedades de carteleras de cines o platafo
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-Mira **Deployment** para conocer como desplegar el proyecto.
-
 
 ### Pre-requisitos 📋
 
@@ -59,8 +57,6 @@ _CABE ACLARAR QUE EL PROYECTO NO TIENE PROTECCIÓN DE RUTAS, ASÍ QUE LA FUNCIÓ
 
 
 ## Construido con 🛠️
-
-_Menciona las herramientas que utilizaste para crear tu proyecto_
 
 * [Spring-boot](https://spring.io/projects/spring-boot) - El framework back usado
 * [React](https://es.reactjs.org/) - Libreria web usado
