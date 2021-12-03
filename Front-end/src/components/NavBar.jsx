@@ -44,8 +44,8 @@ const NavBar = () => {
                     </Nav>
 
                     <NavDropdown title={title} className="mr-auto">
-                            <NavDropdown.Item href="Login">Iniciar Sesion</NavDropdown.Item>
-                            <NavDropdown.Item href="Register">Registrarse</NavDropdown.Item>
+                            <NavDropdown.Item href="/Login">Iniciar Sesion</NavDropdown.Item>
+                            <NavDropdown.Item href="/Register">Registrarse</NavDropdown.Item>
                     </NavDropdown>
                 </Navbar.Collapse>
             </Container>
