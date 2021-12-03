@@ -25,10 +25,16 @@ _En la carpeta ms_back "mvn compile" para descargar las dependencias_
 ```
 mvn compile
 ```
-_También en la carpeta Script_DB se encuentra algunos datos de prueba, reales y funcionales a la fecha 3/12/2021, los cuales puedes testear abriendoolos y ejecutandolos con MySQL Workbench_
+_También en la carpeta Script_DB se encuentra algunos datos de prueba, reales y funcionales a la fecha 3/12/2021, los cuales puedes testear abriendolos y ejecutandolos con MySQL Workbench_
 
 
 _Para ejecutar el proyecto se debe ejecutar la carpeta ms_back con el cmd "mvn spring-boot:run"_
+
+```
+mvn spring-boot:run
+```
+
+_O tambien con el comando de "mvnw spring-boot:run"_
 
 ```
 mvnw spring-boot:run
