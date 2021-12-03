@@ -1,15 +1,15 @@
 import React from 'react';
 import { Card, Col, Row, Button } from 'react-bootstrap';
 
-export default function CardViewMovies(props){
+export default function CardViewMovies(props, {amount}){
 
-    if(props.amount === 0 && props.amount === null){
-        props.amount = props.props.dataSource.length();
+    if(amount === 0 && props.amount === null){
+        amount = props.props.dataSource.length();
     }
 
     const HOST_API = "http://localhost:8080/api/";
 
-    const deleteSerie = (id, e) => {
+    const deleteMovie = (id, e) => {
         console.log(id)
         fetch(HOST_API + "movie/"+id, {
             method: 'DELETE',
@@ -36,7 +36,7 @@ export default function CardViewMovies(props){
                                     <Card.Title>{element.name_movie}</Card.Title>
                                     <Card.Text><b>Fecha de estreno:</b> {element.fecha_movie}</Card.Text>
                                     <Card.Text><b>Cine:</b> {element.cine}</Card.Text>
-                                    {props.login && <Button style={{border: 'solid black 1px'}} className="btn btn-danger" onClick={() => deleteSerie(element.id_movie)}>Eliminar</Button>}
+                                    {props.login && <Button style={{border: 'solid black 1px'}} className="btn btn-danger" onClick={() => deleteMovie(element.id_movie)}>Eliminar</Button>}
                                 </Card.Body>
                             </Card>
                         </Col>

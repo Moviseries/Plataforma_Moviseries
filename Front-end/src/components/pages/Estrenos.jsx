@@ -1,4 +1,4 @@
-import React ,{Fragment, useState}from 'react'
+import React ,{Fragment}from 'react'
 import { Container, Accordion} from 'react-bootstrap';
 import Carousell from '../Carousell';
 import RegisterMovie from '../MovieRegister'
@@ -22,24 +22,27 @@ const Estrenos = () => {
                 <Movies amount={8} />
 
                 { id && 
+                <Fragment>
+                    <Link className="btn btn-primary m-4" to={`/Administrar/:${id}`}>Administrar</Link>
                     <Accordion className="mt-4" defaultActiveKey="0">
                         <Accordion.Item eventKey="0">
-                            <Link className="btn btn-primary" to={`/Administrar/:${id}`}>Administrar</Link>
                             <Accordion.Header className = "titulo">Mostrar</Accordion.Header>
                             <Accordion.Body>
                                 <h1 className="mb-4">Agregar Pelicula</h1>
-                                <RegisterMovie />
+                                <RegisterMovie/>
                             </Accordion.Body>
                         </Accordion.Item>
-                    </Accordion>}
+                    </Accordion>
+                </Fragment>}
                 <hr />
                 
                 <h1>Estrenos Series</h1>
                 <Series amount={8} />
                 { id && 
+                <Fragment>
+                    <Link className="btn btn-primary m-4" to={`/Administrar/:${id}`}>Administrar</Link>
                     <Accordion className="mt-4" defaultActiveKey="0">
                     <Accordion.Item eventKey="0">
-                        <Link className="btn btn-primary" to={`/Administrar/:${id}`}>Administrar</Link>
                         <Accordion.Header className = "titulo">Mostrar</Accordion.Header>
                         <Accordion.Body>
                             <h1>Agregar Serie</h1>
@@ -47,6 +50,7 @@ const Estrenos = () => {
                         </Accordion.Body>
                     </Accordion.Item>
                     </Accordion>
+                </Fragment>
                 }
             </Container>
         </Fragment>
