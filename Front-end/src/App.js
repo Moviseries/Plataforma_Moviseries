@@ -8,6 +8,7 @@ import Series from './components/pages/Series'
 import Gender from './components/pages/Genders'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { useState } from 'react';
+import Administrar from './components/pages/Administrar'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <NavBar />
 
         <Routes>
+          <Route exact path="/Administrar/:id" element={<Administrar/>}/>
           <Route exact path="/Home" element={<Estrenos/>}/>
           <Route exact path="/Home/:id" element={<Estrenos/>}/>
           <Route exact path="/" element={<Estrenos/>}/>

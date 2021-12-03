@@ -10,7 +10,8 @@ export default function ViewGender (props){
 
     const styles = {
         color: 'black',
-        textDecoration: 'none'
+        textDecoration: 'none',
+        padding: '10'
     }
 
     return (
@@ -18,7 +19,7 @@ export default function ViewGender (props){
             {
             props.props.dataSource.map((element) => {
                 return (
-                    <NavDropdown.Item onClick={Reload}><Link style={styles} to={`/Genders/${element.id_gender}/${element.name_gender}`}>{element.name_gender}</Link></NavDropdown.Item>
+                    <NavDropdown.Item  onClick={Reload}><Link style={styles} to={`/Genders/${element.id_gender}/${element.name_gender}`}>{element.name_gender}</Link></NavDropdown.Item>
                 )
             })
             }
