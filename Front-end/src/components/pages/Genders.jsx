@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Container } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import GenderMovie from '../../services/service_gender_movie';

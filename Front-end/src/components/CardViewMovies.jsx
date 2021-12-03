@@ -19,6 +19,7 @@ export default function CardViewMovies(props){
                                 <Card.Body>
                                     <Card.Title>{element.name_movie}</Card.Title>
                                     <Card.Text><b>Fecha de estreno:</b> {element.fecha_movie}</Card.Text>
+                                    <Card.Text><b>Cine:</b> {element.cine}</Card.Text>
                                 </Card.Body>
                             </Card>
                         </Col>

@@ -19,6 +19,7 @@ export default function CardViewSeries(props){
                                 <Card.Body>
                                     <Card.Title>{element.name_serie}</Card.Title>
                                     <Card.Text><b>Fecha de estreno:</b> {element.fecha_serie}</Card.Text>
+                                    <Card.Text><b>Plataforma:</b> {element.plataforma}</Card.Text>
                                 </Card.Body>
                             </Card>
                         </Col>

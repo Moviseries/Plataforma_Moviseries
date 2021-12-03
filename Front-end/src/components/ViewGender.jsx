@@ -1,17 +1,24 @@
 import React from 'react'
 import { NavDropdown } from 'react-bootstrap';
-import Genders from './pages/Genders';
 import { Link } from 'react-router-dom';
 
 export default function ViewGender (props){
 
+    const Reload = () => {
+        window.location.reload(true);
+    }
+
+    const styles = {
+        color: 'black',
+        textDecoration: 'none'
+    }
 
     return (
         <div>
             {
             props.props.dataSource.map((element) => {
                 return (
-                    <NavDropdown.Item ><Link style={{color:'black', textDecoration: 'none'}} to={`/Genders/${element.id_gender}/${element.name_gender}`}>{element.name_gender}</Link></NavDropdown.Item>
+                    <NavDropdown.Item onClick={Reload}><Link style={styles} to={`/Genders/${element.id_gender}/${element.name_gender}`}>{element.name_gender}</Link></NavDropdown.Item>
                 )
             })
             }
